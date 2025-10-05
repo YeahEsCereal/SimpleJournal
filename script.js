@@ -1,9 +1,9 @@
 let journalEntries = []
 let viewStates = {
     Gratitude: true,
-    Goal: false,
-    Starred: true,
-    All: false
+    Goal: true,
+    Starred: false,
+    All: true
 }
 let newEntryType = 'Gratitude'
 document.querySelector('.typeSelected').textContent = `Selected: ${newEntryType}`
@@ -152,4 +152,5 @@ function refreshEntries() {
 
         journalEntriesDiv.appendChild(currEntryDiv)
     })
+
 }
