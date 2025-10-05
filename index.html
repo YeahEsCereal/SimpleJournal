@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Korg by Dungeon Havoc" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple Journal</title>
+</head>
+<body>
+    <div class="newEntryDiv">
+        <div class="typeSelect">
+            <h3>Select a category</h3>
+            <button class="gratitudeSelect typeSelector" onclick="selectType('Gratitude')">Gratitude</button>
+            <button class="goalSelect typeSelector" onclick="selectType('Goal')">Goal</button>
+            <br>
+            <p class="typeSelected">Selected: Gratitude</p>
+        </div>
+        <input type="text" class="newEntryInput" placeholder="Enter text here...">
+        <button class="addButton" onclick="addEntry()">ADD</button>
+    </div>
+
+    <div class="view">
+        <span>View:</span>
+        <button class="viewButton selected Gratitude" onclick="selectView('Gratitude')">Gratitude</button>
+        <button class="viewButton Goal" onclick="selectView('Goal')">Goal</button>
+        <button class="viewButton selected Starred" onclick="selectView('Starred')">Starred</button>
+        <button class="viewButton All" onclick="selectView('All')">All</button>
+    </div>
+
+    <div class="journalEntries"></div>
+
+    <script src="script.js"></script>
+</body></html>

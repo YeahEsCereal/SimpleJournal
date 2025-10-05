@@ -1,0 +1,208 @@
+* {
+    transition: all 0.5s ease;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.view {
+    padding: 1rem 0;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-size: 200%;
+    gap: 10px;
+}
+
+.view button {
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    background-color: hsl(0, 0%, 95%);
+    box-shadow: 0px 0px 10px hsl(259, 13%, 28%);
+    padding: 0 20px;
+    font-size: 75%;
+}
+
+.view button.selected {
+    background-color: hsl(116, 92%, 68%);
+}
+
+.view button:hover {
+    transform: scale(105%);
+}
+
+.journalEntry {
+    position: relative;
+    background-color: hsl(0, 0%, 95%);
+    border: none;
+    box-shadow: 0px 0px 10px hsl(259, 13%, 28%);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    color: hsl(0, 0%, 5%);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    font-size: 1rem;
+}
+
+.journalEntry.starred {
+    background-color: rgb(177, 231, 247);
+}
+
+.journalEntry h3 {
+    margin: 10px 0;
+    color: hsl(0, 0%, 95%);
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 100rem;
+    font-weight: bold;
+}
+
+.journalEntry p {
+    margin: 10px 0;
+    overflow-wrap: break-word;
+}
+
+.journalEntry button {
+    position: absolute;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    aspect-ratio: 1 / 1;
+    margin: 0 10px;
+    color: hsl(0, 0%, 95%);
+    box-shadow: 0px 0px 10px hsl(259, 13%, 28%);
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
+    font-size: 110%;
+}
+
+.journalEntry button:hover {
+    transform: scale(110%);
+}
+
+.journalEntry .removeEntry {
+    background-color: hsl(0, 100%, 54%);
+    right: 10px;
+}
+
+.journalEntry .starEntry {
+    background-color: rgb(20, 159, 239);
+    right: 55px;
+}
+
+.journalEntry .moveEntryDown {
+    background-color: rgb(20, 56, 239);
+    right: 100px;
+}
+
+.journalEntry .moveEntryUp {
+    background-color: rgb(20, 56, 239);
+    right: 145px;
+}
+
+.newEntryDiv {
+    background-color: hsl(0, 0%, 95%);
+    border: none;
+    box-shadow: 0px 0px 10px hsl(259, 13%, 28%);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 20px;
+    color: hsl(0, 0%, 5%);
+}
+
+.newEntryDiv h3 {
+    text-align: center;
+    font-size: 200%;
+    margin: 10px;
+    font-weight: normal;
+}
+
+.newEntryDiv .typeSelector {
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    box-shadow: 0px 0px 5px hsl(259, 13%, 28%);
+    border-radius: 20px;
+    margin: 10px;
+    height: 50px;
+    font-size: 200%;
+    display: inline-block;
+    padding: 10px;
+    line-height: 100%;
+    color: hsl(0, 0%, 95%);
+}
+
+.newEntryDiv .gratitudeSelect {
+    background-color: hsl(99, 87%, 58%);
+}
+
+.newEntryDiv .goalSelect {
+    background-color: hsl(194, 87%, 58%);
+}
+
+.newEntryDiv input {
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    box-shadow: 0px 0px 5px hsl(259, 13%, 28%);
+    border-radius: 20px;
+    margin: 10px;
+    height: 40px;
+    font-size: 200%;
+    padding: 10px;
+    display: block;
+    outline: none;
+}
+
+.newEntryDiv .addButton {
+    background-color: hsl(14, 100%, 54%);
+    border: none;
+    box-shadow: 0px 0px 5px hsl(259, 13%, 28%);
+    border-radius: 20px;
+    margin: 10px;
+    height: 50px;
+    font-size: 200%;
+    display: inline-block;
+    padding: 10px;
+    line-height: 100%;
+    color: hsl(0, 0%, 95%);
+    width: 75%;
+    font-weight: bold;
+}
+
+.newEntryDiv p {
+    text-align: center;
+    padding: 5px;
+    font-size: 175%;
+    margin: 10px 0;
+}
+
+.newEntryDiv button {
+    cursor: pointer;
+}
+
+.newEntryDiv button:hover {
+    transform: scale(102.5%);
+}
+
+.newEntryDiv input:focus {
+    transform: scale(102.5%);
+}
+
+.typeSelect:has(.typeSelector:hover) .typeSelector:not(:hover) {
+    filter: brightness(80%);
+}
