@@ -1,2 +1,3 @@
 # SimpleJournal
-A simple journal that acts like a list of entries
+
+A simple journal with two categories: goals and gratitude. You can add entries onto the site like a list. This is only a small personal project though.
